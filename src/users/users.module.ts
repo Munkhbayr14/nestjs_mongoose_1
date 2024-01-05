@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { User, UserSchema } from 'src/schema/user.schema';
 import { UsersService } from './users.service';
 import { UsersController } from './users.controller';
+import { UserSettings, UserSettingsSchema } from 'src/schema/UserSettings.schema';
 
 @Module({
     imports: [
@@ -11,6 +12,10 @@ import { UsersController } from './users.controller';
                 name: User.name,
                 schema: UserSchema,
             },
+            {
+                name: UserSettings.name,
+                schema: UserSettingsSchema,
+            }
         ]),
     ],
     providers: [UsersService],

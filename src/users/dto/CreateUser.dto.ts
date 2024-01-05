@@ -1,5 +1,10 @@
-import { IsNotEmpty, IsOptional, IsString } from 'class-validator'
+import { IsOptional, IsString } from 'class-validator'
 
+export class CreateUSerSettignsDto {
+    receiveNotifications?: boolean;
+    receiveEmails?: boolean;
+    receiveSMS?: boolean;
+}
 
 export class CreateUserDto {
     @IsString()
@@ -10,5 +15,5 @@ export class CreateUserDto {
     @IsOptional()
     email?: string;
 
-
+    settings?: CreateUSerSettignsDto;
 }
