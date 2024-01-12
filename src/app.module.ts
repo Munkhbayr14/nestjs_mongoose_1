@@ -3,6 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './users/users.module';
 import { PostModule } from './posts/posts.module';
 
+
 @Module({
   imports: [
     MongooseModule.forRoot(
@@ -10,6 +11,7 @@ import { PostModule } from './posts/posts.module';
     ),
     UsersModule,
     PostModule,
+
   ],
 })
 export class AppModule { }
